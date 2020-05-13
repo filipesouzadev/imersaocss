@@ -1,14 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: url('https://image.freepik.com/fotos-gratis/smooth-dark-blue-with-black-vignette-studio-bem-use-como-plano-de-fundo-relatorio-de-negocios-digital-modelo-de-site_1258-748.jpg');
     background-size: auto 100vh;
-    font-family: Calibri;
+    font-family: 'Roboto Condensed', sans-serif;
     height: 100vh;
+    font-size: 12px;
     
 }
 
-.menu {
-    background-color: white;
+@media (min-width: 400px) {
+    body{
+        font-size: 14px;
+    }
 }
+@media (min-width: 600px) {
+    body{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        font-size: 20px;
+    }
+}
+
+.perfil{
+   position: absolute;
+   right: 0;
+   margin: auto;
+   left: 0;
+   border-radius: 50%;
+   margin-top: 20px;
+
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: rgb(90, 155, 216);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    
+}
+
+.menu a {
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
 .menu li {
     list-style: none;
 }
@@ -19,19 +72,76 @@ body {
 
 a {
     text-decoration: none;
-    color: teal;
+    color: whitesmoke;
 }
 a:hover {
     text-decoration:underline;
+   
 }
 
 .site-subtitle,
-.site-title{
+.site-title {
     text-align: center;
     color: whitesmoke;
+    
+
 }
 
-.site-subtitle{
-    font-style: italic;
+.site-title {
+    font-size: 16mm;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.5em;
 }
-  
+
+.site-subtitle {
+    font-style: italic;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.cursos {
+    padding: 2em;
+    height: 100vh;
+}
+
+.cursos .grid {
+    display: grid;
+    gap: 1.5em;
+}
+
+@media(min-width:560px){
+    .cursos .grid {
+        display: grid;
+        gap: 1.5em;
+        grid-template-columns: 240px 240px;
+        justify-content: center;
+     }
+ }
+
+ @media(min-width: 880px){
+    .cursos .grid {
+        display: grid;
+        gap: 1.5em;
+        align-content: center;
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+     }
+ }
+
+.cursos figure{
+    text-align: center;
+}
+
+.cursos h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    margin-bottom: 1.5em ;
+    font-size: 2em;
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 100px;
+    width: 150px;
+    object-fit: contain;
+    object-position: left;
+}
